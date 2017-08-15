@@ -1,0 +1,70 @@
+<!DOCTYPE>
+<html ng-app="myApp">
+<head>
+	<title>Movie App</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+<div class="container" ng-controller="AppCtrl" >
+	<h1>Movie Website</h1>
+	<p>Recommended Movie</p>
+	<table class="table">
+			
+			<tr>
+			<td><th>Title</th></td><td>{{title}}</td>
+			</tr>
+			<tr>		
+			<td><th>Release date</th></td><td>{{release}}</td>
+			</tr>		
+			<tr>
+			<td><th>Duration</th></td><td>{{duration}}</td>
+			</tr>
+			<tr>
+			<td><th>Genre</th></td><td>{{genre}}</td>
+			</tr>
+			<tr>
+			<td><th>Synopsis</th></td><td>{{synopsis}}</td>
+			</tr>
+			
+			
+		
+			
+		
+	</table>
+
+
+
+		<form action="/" method="post">
+		  <div class="form-group">
+		    <label for="inputsm">Title</label>
+		    <input class="form-control input-sm" id="title" name="title"  type="text">
+		  </div>
+		   <div class="form-group">
+		    <label for="inputsm">Release date</label>
+		    <input class="form-control" id="release" name="release" type="text">
+		  </div>
+		  <div class="form-group">
+		    <label for="inputsm">Duration</label>
+		    <input class="form-control input-sm" id="duration" name="duration"  type="text">
+		  </div>
+		  <div class="form-group">
+		    <label for="inputsm">Genre</label>
+		    <input class="form-control input-sm" id="genre" name="genre"  type="text">
+		  </div>
+		  <div class="form-group">
+		    <label for="inputsm">Synopsis</label>
+		    <input class="form-control input-sm" id="synopsis" name="synopsis"  type="text">
+		  </div>
+		  <button class="btn btn-success" id="updateMovie" class="btn btn-default">Submit</button>
+		</form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+<script type="text/javascript" src='https://rawgithub.com/gsklee/ngStorage/master/ngStorage.js'></script>
+<script src="controllers/controller.js"></script>
+</body>
+</html>

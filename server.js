@@ -1,14 +1,14 @@
 var express = require('express');
 var app = express();
-var router = express.Router();
+
 var bodyParser = require('body-parser');
-var cors = require('cors');
+
 var fs = require('fs');
 var path = require('path');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cors());
+
 app.use(express.static(__dirname + "/public"));
 
 app.get('/recom', function(req, res){

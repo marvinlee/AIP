@@ -38,28 +38,35 @@
 
 
 
-		<form action="/" method="post">
+		<form name = "UpdateForm" action="/" method="post">
 		  <div class="form-group">
 		    <label for="inputsm">Title</label>
-		    <input class="form-control input-sm" id="title" name="title"  type="text">
+		    <input class="form-control input-sm" id="title" name="title" ng-model="movietitle"  type="text" required >
+		    
+		    <span ng-show="UpdateForm.title.$touched && UpdateForm.title.$invalid">Movie title is required.</span>
+		    
 		  </div>
 		   <div class="form-group">
 		    <label for="inputsm">Release date</label>
-		    <input class="form-control" id="release" name="release" type="text">
+		    <input class="form-control" id="release" name="release" ng-model="movierelease" type="text" required >
+		    <span ng-show="UpdateForm.release.$touched && UpdateForm.release.$invalid">Release date is required.</span>
 		  </div>
 		  <div class="form-group">
 		    <label for="inputsm">Duration</label>
-		    <input class="form-control input-sm" id="duration" name="duration"  type="text">
+		    <input class="form-control input-sm" id="duration" name="duration" ng-model="movieduration"  type="text" required  >
+		    <span ng-show="UpdateForm.duration.$touched && UpdateForm.duration.$invalid">Duration is required.</span>
 		  </div>
 		  <div class="form-group">
 		    <label for="inputsm">Genre</label>
-		    <input class="form-control input-sm" id="genre" name="genre"  type="text">
+		    <input class="form-control input-sm" id="genre" name="genre" ng-model="moviegenre"  type="text" required >
+		    <span ng-show="UpdateForm.genre.$touched && UpdateForm.genre.$invalid">Genre is required.</span>
 		  </div>
 		  <div class="form-group">
 		    <label for="inputsm">Synopsis</label>
-		    <input class="form-control input-sm" id="synopsis" name="synopsis"  type="text">
+		    <input class="form-control input-sm" id="synopsis" name="synopsis" ng-model="moviesynopsis"  type="text" required >
+		    <span ng-show="UpdateForm.synopsis.$touched && UpdateForm.synopsis.$invalid">Synopsis is required.</span>
 		  </div>
-		  <button class="btn btn-success" id="updateMovie" class="btn btn-default">Submit</button>
+		  <button class="btn btn-success" id="updateMovie" class="btn btn-default" ng-disabled=!UpdateForm.$valid>Submit</button>
 		</form>
 </div>
 
